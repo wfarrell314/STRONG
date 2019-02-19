@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js" integrity="sha384-zDnhMsjVZfS3hiP7oCBRmfjkQC4fzxVxFhBx8Hkz2aZX8gEvA/jsP3eXRCvzTofP"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="/public/js/dashboard.js" type="module"></script>
+    <script src="/public/js/helpers.js" type="module"></script>
+    <link rel="stylesheet" href="/public/css/dashboard.css">
+
+    
+    <title>STRONG</title>
+</head>
+
+<body>    
+    <div id="header" class="bg-light shadow-sm border-bottom h-100 text-right">
+        <i id="i_menu" class="fas fa-bars my-auto pr-4 hide"></i>
+    </div>
+    <div class="container-fluid height-full">
+        <div class="row">
+            <div id="nav" class="col-md-2 border-right shadow-sm height-full px-4">
+                <img class="image-fluid mx-auto d-block pt-4" src="/public/img/dumbbell.png" alt="">
+                <h1 class="text-center pb-4">STRONG</h1>
+                <ul id="nav_list" class="text-left my-auto">
+                    <li class="zoom pb-4">OVERHEAD PRESS</li>
+                    <li class="zoom pb-4">BENCH PRESS</li>
+                    <li class="zoom pb-4">SQUAT</li>
+                    <li class="zoom pb-4">DEADLIFT</li>
+                    <li class="zoom pb-4">BARBELL ROW</li>
+                </ul>
+            </div>
+            <div id="main_content" class="col-md-9  border rounded shadow-sm p-3 mx-auto my-5 ">
+                <h1 id="heading"></h1>
+                <div class="row">
+                    <div class="col-md-3 border rounded shadow-sm p-3 my-3  mx-auto">
+                        <h2 class="mx-auto pb-2">Log Set</h2>
+                        <form id="logForm">
+                            <div class="form-group">
+                                <label>Enter Weight (lbs.)</label>
+                                <input type="number" class="form-control" id="enter_weight" placeholder="Weight" min="1"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>Enter Reps</label>
+                                <input type="number" class="form-control" id="enter_reps" placeholder="Reps" min="1"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="date">Date</label>
+                                <input class="form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text"
+                                    autocomplete="off" required />
+                            </div>
+                            <button type="submit" id="submit" class="btn btn-primary btn-block py-3 my-4">Log</button>
+                            <div id="message"></div>
+                        </form>
+                    </div>
+                    <div id="table" class="col-md-8 border rounded shadow-sm p-3 my-3  mx-auto">
+                        <h2>Recent Sets</h2>
+                        <table id="history" class="table">
+                            <body>
+                                <tr>
+                                    <th class="text-center">Date</th>
+                                    <th class="text-center">Weight</th>
+                                    <th class="text-center">Reps</th>
+                                    <th class="text-center">1RM</th>
+                                </tr>
+                            </body>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="bg-light border-top shadow-sm">
+    </div>
+
+</body>
+
+</html>
